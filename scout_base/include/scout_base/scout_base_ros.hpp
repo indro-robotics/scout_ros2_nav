@@ -37,6 +37,7 @@ class ScoutBaseRos : public rclcpp::Node {
 
   bool simulated_robot_ = false;
   int sim_control_rate_ = 50;
+  bool battery_status_ = true;
 
   bool is_omni_ = false;
   std::shared_ptr<ScoutRobot> robot_;
