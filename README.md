@@ -4,7 +4,7 @@
 
 This repository contains minimal packages to control the scout robot using ROS. 
 
-* scout_base: a ROS wrapper around [ugv_sdk](https://github.com/westonrobot/ugv_sdk) to monitor and control the scout robot
+* scout_base: a ROS wrapper around [ugv_sdk](https://github.com/indro-robotics/ugv_sdk) to monitor and control the scout robot
 * scout_description: URDF model for the mobile base
 * scout_msgs: scout related message definitions
 
@@ -23,12 +23,12 @@ This repository contains minimal packages to control the scout robot using ROS.
     (the following instructions assume your catkin workspace is at: ~/ros2_ws/src)
 
     ```
-    $ mkdir -p ~/ros2_ws/src
-    $ cd ~/ros2_ws/src
-    $ git clone https://github.com/indro-robotics/ugv_sdk.git
-    $ git clone https://github.com/westonrobot/scout_ros2.git
-    $ cd ..
-    $ colcon build
+    mkdir -p ~/ros2_ws/src
+    cd ~/ros2_ws/src
+    git clone https://github.com/indro-robotics/ugv_sdk.git
+    git clone https://github.com/indro-robotics/scout_ros2.git
+    cd ..
+    colcon build
     ```
 
 2. Launch ROS nodes
@@ -36,11 +36,11 @@ This repository contains minimal packages to control the scout robot using ROS.
 * Start the base node for the Scout robot
 
     ```
-    $ ros2 launch scout_base scout_base.launch.py
+    ros2 launch scout_base scout_base.launch.py
     ```
 
 * Start the keyboard tele-op node
 
     ```
-    $ ros2 run teleop_twist_keyboard teleop_twist_keyboard
+    ros2 run teleop_twist_keyboard teleop_twist_keyboard
     ```
